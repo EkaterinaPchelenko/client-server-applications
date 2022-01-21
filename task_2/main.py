@@ -69,7 +69,7 @@ def write_order_to_json(item, quantity, price, buyer, date):
         info = my_dict['orders']
 
         info.append(data)
-        json.dump(my_dict, file, indent=4)
+        json.dump(my_dict, file, indent=4, ensure_ascii=False)
 
 
 for i in range(4):

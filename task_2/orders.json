@@ -1,7 +1,7 @@
 {
     "orders": [
         {
-            "item": "\u043f\u0440\u0438\u043d\u0442\u0435\u0440",
+            "item": "принтер",
             "quantity": "10",
             "price": "6700",
             "buyer": "Ivanov I.I.",
