@@ -1,9 +1,0 @@
-amount: 100
-price:
-  motherboards: 150€
-  processors: 200€
-  screens: 100€
-products:
-- processors
-- motherboards
-- screens
