@@ -8,7 +8,7 @@ from common.utils import get_message, send_message
 
 def process_client_message(message):
     if ACTION in message and message[ACTION] == PRESENCE and TIME in message \
-            and USER in message and message[USER][ACCOUNT_NAME] == 'Guest':
+            and USER in message and message[USER][ACCOUNT_NAME] == 'ME':
         return {RESPONSE: 200}
     return {
         RESPONSE: 400,

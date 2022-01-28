@@ -7,7 +7,7 @@ from common.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, \
 from common.utils import get_message, send_message
 
 
-def create_presence(username='Guest'):
+def create_presence(username='ME'):
     info = {
         ACTION: PRESENCE,
         TIME: time.time(),
@@ -50,5 +50,4 @@ def main():
         print('Не удалось декодировать сообщение сервера.')
 
 
-if __name__ == '__main__':
-    main()
+
