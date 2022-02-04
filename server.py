@@ -5,13 +5,14 @@ import json
 from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, \
     PRESENCE, TIME, USER, ERROR, DEFAULT_PORT
 from common.utils import get_message, send_message
-
+from my_decorators import log_deco
 import logs.server_log_config
 
 logger = logging.getLogger('app.server')
 
+@log_deco
 def process_client_message(message):
-    logger.debug(f'Сооющение от клиента {message}')
+    logger.debug(f'Сообщение от клиента {message}')
     if ACTION in message and message[ACTION] == PRESENCE and TIME in message \
             and USER in message and message[USER][ACCOUNT_NAME] == 'ME':
         logger.debug(f'Сообщение {message} от клиента успешно разобрано.')

@@ -1,7 +1,2 @@
-2022-02-01 17:34:13,103 DEBUG      server_log_config.py   debug
-2022-02-01 17:34:13,103 INFO       server_log_config.py   info
-2022-02-01 17:34:13,103 ERROR      server_log_config.py   error
-2022-02-01 17:34:13,103 CRITICAL   server_log_config.py   critical
-2022-02-01 17:52:59,825 DEBUG      server.py              Сервер с адресом  и портом 7777 запущен.
-2022-02-01 17:58:47,109 DEBUG      server.py              Сервер с адресом  и портом 7777 запущен.
-2022-02-01 18:05:24,048 DEBUG      server.py              Сервер с адресом  и портом 7777 запущен.
+2022-02-04 21:31:26,963 DEBUG      server.py              Сообщение от клиента {'action': 'presence', 'time': 1643992286.9634817, 'user': {'account_name': 'ME'}}
+2022-02-04 21:31:26,963 DEBUG      server.py              Сообщение {'action': 'presence', 'time': 1643992286.9634817, 'user': {'account_name': 'ME'}} от клиента успешно разобрано.

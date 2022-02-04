@@ -6,12 +6,14 @@ import time
 from common.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, \
     RESPONSE, ERROR, DEFAULT_IP_ADDRESS, DEFAULT_PORT
 from common.utils import get_message, send_message
+import logs.server_log_config
 
-import logs.client_log_config
+from my_decorators import log_deco
 
 
 logger = logging.getLogger('app.client')
 
+@log_deco
 def create_presence(username='ME'):
     info = {
         ACTION: PRESENCE,
@@ -24,6 +26,7 @@ def create_presence(username='ME'):
     return info
 
 
+@log_deco
 def process_ans(message):
     logger.debug(f'Сообщение от сервера: {message}')
     if RESPONSE in message:
@@ -51,7 +54,6 @@ def main():
         client_port = DEFAULT_PORT
     except ValueError:
         # print('В качестве порта может быть указано только число в диапазоне от 1024 до 65535.')
-
         sys.exit(1)
 
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -66,5 +68,6 @@ def main():
         logger.error('Не удалось декодировать сообщение сервера.')
         # print('Не удалось декодировать сообщение сервера.')
 
-
+if __name__ == '__main__':
+    main()
 

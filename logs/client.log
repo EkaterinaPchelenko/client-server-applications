@@ -1,4 +1,6 @@
-2022-02-01 17:08:44,887 DEBUG      client_log_config.py   debug
-2022-02-01 17:08:44,887 INFO       client_log_config.py   info
-2022-02-01 17:08:44,887 ERROR      client_log_config.py   error
-2022-02-01 17:08:44,887 CRITICAL   client_log_config.py   critical
+2022-02-04 21:31:26,963 INFO       client.py              Получено сообщение для пользователя ME
+2022-02-04 21:31:26,963 DEBUG      my_decorators.py       Вызвана функция create_presence с аргументами ((), {}).Вызов произведён из функции main()
+2022-02-04 21:31:26,963 DEBUG      client.py              Сообщение от сервера: {'response': 200}
+2022-02-04 21:31:26,963 DEBUG      client.py              Сообщение {'response': 200} успешно разобрано
+2022-02-04 21:31:26,963 DEBUG      my_decorators.py       Вызвана функция process_ans с аргументами (({'response': 200},), {}).Вызов произведён из функции main()
+2022-02-04 21:31:26,963 INFO       client.py              Принято сообщение от сервера: 200 : OK
