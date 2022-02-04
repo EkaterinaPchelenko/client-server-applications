@@ -1,3 +1,4 @@
+import logging.handlers
 import logging
 import os
 
@@ -7,7 +8,7 @@ my_path = os.path.join(my_path, 'server.log')
 logger = logging.getLogger('app.server')
 
 formatter = logging.Formatter('%(asctime)s %(levelname)-10s %(filename)-22s %(message)s')
-handler = logging.FileHandler(my_path, encoding='utf8')
+handler = logging.handlers.TimedRotatingFileHandler(my_path, encoding='utf8', interval=1, when='D')
 logger.setLevel(logging.DEBUG)
 handler.setFormatter(formatter)
 logger.addHandler(handler)
