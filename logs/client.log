@@ -1,0 +1,4 @@
+2022-02-01 17:08:44,887 DEBUG      client_log_config.py   debug
+2022-02-01 17:08:44,887 INFO       client_log_config.py   info
+2022-02-01 17:08:44,887 ERROR      client_log_config.py   error
+2022-02-01 17:08:44,887 CRITICAL   client_log_config.py   critical
