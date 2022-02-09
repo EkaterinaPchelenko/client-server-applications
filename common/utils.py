@@ -12,7 +12,12 @@ def get_message(client):
     raise ValueError
 
 
+class NonDictInputError:
+    pass
+
+
 def send_message(sock, message):
+
     json_message = json.dumps(message)
     enc_message = json_message.encode(ENCODING)
     sock.send(enc_message)
