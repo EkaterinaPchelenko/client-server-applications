@@ -1,9 +1,12 @@
 import logging
+import select
 import socket
 import sys
 import json
+import time
+
 from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, \
-    PRESENCE, TIME, USER, ERROR, DEFAULT_PORT
+    PRESENCE, TIME, USER, ERROR, DEFAULT_PORT, MESSAGE, MESSAGE_TEXT, SENDER
 from common.utils import get_message, send_message
 from my_decorators import log_deco
 import logs.server_log_config
@@ -11,18 +14,24 @@ import logs.server_log_config
 logger = logging.getLogger('app.server')
 
 @log_deco
-def process_client_message(message):
+def process_client_message(message, mes_list, client):
     logger.debug(f'Сообщение от клиента {message}')
     if ACTION in message and message[ACTION] == PRESENCE and TIME in message \
             and USER in message and message[USER][ACCOUNT_NAME] == 'ME':
         logger.debug(f'Сообщение {message} от клиента успешно разобрано.')
-        return {RESPONSE: 200}
-    logger.error(f'Не удалось разобрать сообщение клиента.'
-                 f'Неприемлимое состояние параметров.')
-    return {
-        RESPONSE: 400,
-        ERROR: 'Bad Request'
-    }
+        send_message(client, {RESPONSE:200})
+        return
+    elif ACTION in message and message[ACTION] == MESSAGE and TIME in message and MESSAGE_TEXT in message:
+        mes_list.append((message[ACCOUNT_NAME], message[MESSAGE_TEXT]))
+        return
+    else:
+        logger.error(f'Не удалось разобрать сообщение клиента.'
+                     f'Неприемлимое состояние параметров.')
+        send_message(client,
+        {   RESPONSE: 400,
+            ERROR: 'Bad Request'
+        })
+        return
 
 
 def main():
@@ -60,21 +69,54 @@ def main():
 
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     transport.bind((server_address, server_port))
-
+    transport.settimeout(0.5)
     transport.listen(MAX_CONNECTIONS)
 
+    messages = []
+    clients = []
+
     while True:
-        client, client_address = transport.accept()
+
         try:
-            client_message = get_message(client)
-            print(client_message)
-            response = process_client_message(client_message)
-            send_message(client, response)
-            client.close()
-        except (ValueError, json.JSONDecodeError):
-            logger.error(f'Принято некорректное сообщение от клиента с адресом {client_address}')
-            # print('Принято некорретное сообщение от клиента.')
-            client.close()
+            client, client_address = transport.accept()
+        except OSError:
+            pass
+        else:
+            logger.info(f'Установлено соединение с клиентом {client_address}')
+            clients.append(client)
+
+        receive_list = []
+        send_list = []
+        error_list = []
+
+        try:
+            if clients:
+                receive_list, send_list, error_list = select.select(clients, clients, [], 0)
+        except OSError:
+            pass
+
+        if receive_list:
+            for cli_with_mes in receive_list:
+                try:
+                    process_client_message(get_message(cli_with_mes), messages, cli_with_mes)
+                except:
+                    logger.info(f'Клиент {cli_with_mes.getpeername()} отключился от сервера.')
+                    clients.remove(cli_with_mes)
+
+        if messages and send_list:
+            message = {
+                ACTION: MESSAGE,
+                TIME: time.time(),
+                SENDER: messages[0][0],
+                MESSAGE_TEXT: messages[0][1]
+            }
+            del messages[0]
+            for client in send_list:
+                try:
+                    send_message(client, message)
+                except:
+                    logger.info(f'Не удалось отправить сообщение. Клиент {client.getpeername()} отключился от сервера.')
+                    clients.remove(client)
 
 
 if __name__ == '__main__':
