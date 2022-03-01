@@ -18,3 +18,6 @@ ERROR = 'error'
 MESSAGE = 'message'
 MESSAGE_TEXT = 'message text'
 EXIT = 'exit'
+
+RESPONSE_200 = {RESPONSE: 200}
+RESPONSE_400 = {RESPONSE: 400, ERROR: None}
