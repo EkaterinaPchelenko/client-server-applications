@@ -93,6 +93,7 @@ class Server(metaclass=ServerMaker):
             if message[USER][ACCOUNT_NAME] not in self.names.keys():
                 self.names[message[USER][ACCOUNT_NAME]] = client
                 send_message(client, {RESPONSE: 200})
+                logger.debug('Сообщение от клиента корректно')
             else:
                 response = RESPONSE_400
                 response[ERROR] = 'Такое имя пользователя уже используется.'
