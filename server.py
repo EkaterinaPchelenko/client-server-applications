@@ -26,6 +26,7 @@ def arg_parser():
     namespace = parser.parse_args(sys.argv[1:])
     listen_address = namespace.a
     listen_port = namespace.p
+    logger.debug(f'arg_parser: {listen_address, listen_port}')
     return listen_address, listen_port
 
 
