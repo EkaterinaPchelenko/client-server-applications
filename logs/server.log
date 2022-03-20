@@ -1,0 +1,108 @@
+2022-03-14 21:14:40,133 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:15:41,021 DEBUG      my_decorators.py       Вызвана функция arg_parser с аргументами ((), {}).Вызов произведён из функции main()
+2022-03-14 21:15:41,068 INFO       server.py              Запущен сервер, порт для подключений: 7777 , адрес с которого принимаются подключения: . Если адрес не указан, принимаются соединения с любых адресов.
+2022-03-14 21:15:41,177 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55171)
+2022-03-14 21:15:41,177 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:15:41,193 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55172)
+2022-03-14 21:15:41,193 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274541.177923, 'user': {'account_name': 'test1'}}
+2022-03-14 21:15:41,193 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:15:41,193 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:15:41,209 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:15:41,209 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55173)
+2022-03-14 21:15:41,209 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274541.1935477, 'user': {'account_name': 'test2'}}
+2022-03-14 21:15:41,224 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:15:41,224 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274541.1935477, 'user': {'account_name': 'test3'}}
+2022-03-14 21:15:41,224 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:16:10,713 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:16:11,213 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'message', 'from': 'test3', 'to': 'test1', 'time': 1647274570.7134385, 'message text': 'meow'}
+2022-03-14 21:16:11,213 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:16:11,213 INFO       server.py              Отправлено сообщение пользователю test1 от пользователя test3.
+2022-03-14 21:17:22,138 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:17:22,233 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'message', 'from': 'test3', 'to': 'test1', 'time': 1647274642.1388476, 'message text': 'you are an idiot'}
+2022-03-14 21:17:22,233 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:17:22,233 INFO       server.py              Отправлено сообщение пользователю test1 от пользователя test3.
+2022-03-14 21:18:04,142 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:18:04,345 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'message', 'from': 'test3', 'to': '', 'time': 1647274684.142543, 'message text': ''}
+2022-03-14 21:18:04,345 ERROR      server.py              Пользователь  не зарегистрирован на сервере, отправка сообщения невозможна.
+2022-03-14 21:18:43,086 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:18:43,461 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'message', 'from': 'test3', 'to': 'test2', 'time': 1647274723.086496, 'message text': 'you are an idiot\\'}
+2022-03-14 21:18:43,461 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:18:43,461 INFO       server.py              Отправлено сообщение пользователю test2 от пользователя test3.
+2022-03-14 21:19:07,394 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55637)
+2022-03-14 21:19:07,410 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:07,410 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55638)
+2022-03-14 21:19:07,410 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274747.3948228, 'user': {'account_name': 'test1'}}
+2022-03-14 21:19:07,410 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:07,410 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:07,910 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274747.4104507, 'user': {'account_name': 'test2'}}
+2022-03-14 21:19:07,910 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:08,293 DEBUG      my_decorators.py       Вызвана функция arg_parser с аргументами ((), {}).Вызов произведён из функции main()
+2022-03-14 21:19:08,340 INFO       server.py              Запущен сервер, порт для подключений: 7777 , адрес с которого принимаются подключения: . Если адрес не указан, принимаются соединения с любых адресов.
+2022-03-14 21:19:21,163 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55658)
+2022-03-14 21:19:21,163 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:21,178 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55659)
+2022-03-14 21:19:21,178 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274761.1633568, 'user': {'account_name': 'test1'}}
+2022-03-14 21:19:21,178 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:21,178 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:21,682 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274761.1789808, 'user': {'account_name': 'test2'}}
+2022-03-14 21:19:21,682 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:21,921 DEBUG      my_decorators.py       Вызвана функция arg_parser с аргументами ((), {}).Вызов произведён из функции main()
+2022-03-14 21:19:21,952 INFO       server.py              Запущен сервер, порт для подключений: 7777 , адрес с которого принимаются подключения: . Если адрес не указан, принимаются соединения с любых адресов.
+2022-03-14 21:19:34,460 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55694)
+2022-03-14 21:19:34,460 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:34,475 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55695)
+2022-03-14 21:19:34,475 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274774.4603033, 'user': {'account_name': 'test1'}}
+2022-03-14 21:19:34,475 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:34,475 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:34,522 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55696)
+2022-03-14 21:19:34,522 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274774.4759073, 'user': {'account_name': 'test2'}}
+2022-03-14 21:19:34,522 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:34,522 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:35,038 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274774.522783, 'user': {'account_name': 'test3'}}
+2022-03-14 21:19:35,038 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:19:35,320 DEBUG      my_decorators.py       Вызвана функция arg_parser с аргументами ((), {}).Вызов произведён из функции main()
+2022-03-14 21:19:35,351 INFO       server.py              Запущен сервер, порт для подключений: 7777 , адрес с которого принимаются подключения: . Если адрес не указан, принимаются соединения с любых адресов.
+2022-03-14 21:19:50,764 INFO       server.py              Клиент ('127.0.0.1', 55173) отключился от сервера.
+2022-03-14 21:19:53,304 INFO       server.py              Клиент ('127.0.0.1', 55172) отключился от сервера.
+2022-03-14 21:20:01,318 DEBUG      my_decorators.py       Вызвана функция arg_parser с аргументами ((), {}).Вызов произведён из функции main()
+2022-03-14 21:20:01,365 INFO       server.py              Запущен сервер, порт для подключений: 7777 , адрес с которого принимаются подключения: . Если адрес не указан, принимаются соединения с любых адресов.
+2022-03-14 21:20:01,521 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55745)
+2022-03-14 21:20:01,521 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:01,552 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55746)
+2022-03-14 21:20:01,552 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274801.5217223, 'user': {'account_name': 'test1'}}
+2022-03-14 21:20:01,552 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:01,568 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:01,568 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:01,568 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55747)
+2022-03-14 21:20:01,568 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274801.5529673, 'user': {'account_name': 'test2'}}
+2022-03-14 21:20:01,584 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:01,584 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274801.5685644, 'user': {'account_name': 'test3'}}
+2022-03-14 21:20:01,584 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:14,635 DEBUG      my_decorators.py       Вызвана функция arg_parser с аргументами ((), {}).Вызов произведён из функции main()
+2022-03-14 21:20:14,681 INFO       server.py              Запущен сервер, порт для подключений: 7777 , адрес с которого принимаются подключения: . Если адрес не указан, принимаются соединения с любых адресов.
+2022-03-14 21:20:14,838 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55779)
+2022-03-14 21:20:14,838 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:14,853 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55780)
+2022-03-14 21:20:14,853 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274814.8382452, 'user': {'account_name': 'test1'}}
+2022-03-14 21:20:14,853 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:14,869 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:14,931 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55781)
+2022-03-14 21:20:14,931 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274814.8538718, 'user': {'account_name': 'test2'}}
+2022-03-14 21:20:14,931 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:14,931 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:15,432 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274814.9319954, 'user': {'account_name': 'test3'}}
+2022-03-14 21:20:15,432 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:24,295 DEBUG      my_decorators.py       Вызвана функция arg_parser с аргументами ((), {}).Вызов произведён из функции main()
+2022-03-14 21:20:24,326 INFO       server.py              Запущен сервер, порт для подключений: 7777 , адрес с которого принимаются подключения: . Если адрес не указан, принимаются соединения с любых адресов.
+2022-03-14 21:20:24,576 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55791)
+2022-03-14 21:20:24,576 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:24,592 INFO       server.py              Установлено соедение с ПК ('127.0.0.1', 55792)
+2022-03-14 21:20:24,592 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274824.5768883, 'user': {'account_name': 'test1'}}
+2022-03-14 21:20:24,592 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:24,623 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:25,139 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'presence', 'time': 1647274824.5925136, 'user': {'account_name': 'test2'}}
+2022-03-14 21:20:25,139 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:57,256 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:57,584 DEBUG      server.py              Разбор сообщения от клиента : {'action': 'message', 'from': 'test2', 'to': 'test1', 'time': 1647274857.2568417, 'message text': 'you are an idiot'}
+2022-03-14 21:20:57,584 DEBUG      utils.py               SEND MESSAGE
+2022-03-14 21:20:57,584 INFO       server.py              Отправлено сообщение пользователю test1 от пользователя test2.
